@@ -54,13 +54,6 @@ class WebSocketClient
         cc.info("socket send", action, req_data);
     }
 
-    sendtest()
-    {
-        this.ws.send(JSON.stringify({Hello: {
-            Name: 'leaf'
-        }}))
-    }
-
 
     connect(cb?:utils.handler)
     {
