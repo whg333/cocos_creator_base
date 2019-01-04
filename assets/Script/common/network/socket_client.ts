@@ -132,7 +132,12 @@ class WebSocketClient
 
     private on_ws_message(event:MessageEvent):any
     {
+        //二进制数据解析
+        // let decoder = new TextDecoder('utf-8')
+        // const eventData = decoder.decode(event.data)
+        // const datas = JSON.parse(eventData) || eventData;
         const datas = JSON.parse(event.data) || event.data;
+
         let action:string;
         for(let key in datas)
         {
